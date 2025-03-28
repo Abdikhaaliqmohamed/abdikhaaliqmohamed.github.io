@@ -1,0 +1,131 @@
+/* General Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Search Bar Styling */
+#searchInput {
+    padding: 10px;
+    width: 60%;
+    margin-right: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #555;
+}
+
+/* Movies Container Styling */
+#moviesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+/* Individual Movie Card Styling */
+.movie {
+    background-color: #fff;
+    width: 200px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects for Movie Cards */
+.movie:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Movie Poster Styling */
+.movie img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.movie img:hover {
+    transform: scale(1.1);
+}
+
+/* Movie Title and Year Styling */
+.movie h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.movie p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* IMDb Link Styling */
+.movie a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.movie a:hover {
+    background-color: #555;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #moviesContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
